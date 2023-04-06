@@ -1,7 +1,6 @@
 import http from "http";
-import WebSocket from "ws";
-
 import express from "express";
+import SocketIo from "socket.io";
 
 const app = express();
 
@@ -13,29 +12,40 @@ app.get("/*", (req, res) => res.redirect("/"));
 
 const handleListen = () => console.log(`Listening on http://localhost:3000`);
 
-const server = http.createServer(app);
-const wss = new WebSocket.Server({ server });
+const httpServer = http.createServer(app);
+const wsServer = SocketIo(httpServer);
+//socketio server
 
-const sockets = [];
-
-wss.on("connection", (backSocket) => {
-  sockets.push(backSocket); //firefox, IE, Chrome
-  backSocket["nickname"] = "Anon"; //기본은 Anon
-  console.log("connected to browser");
-  backSocket.on("close", () => console.log("disconnected from broswser"));
-  backSocket.on("message", (msg) => {
-    const message = JSON.parse(msg);
-    switch (message.type) {
-      case "new_message":
-        sockets.forEach((aSocket) =>
-          aSocket.send(`${backSocket.nickname}: ${message.payload}`)
-        );
-        break;
-      case "nickname":
-        backSocket["nickname"] = message.payload;
-        break;
-    }
+wsServer.on("connection", (backSocket) => {
+  backSocket.on("enter_room", (roomName, done) => {
+    console.log(roomName);
+    setTimeout(() => {
+      done("hello from the back");
+    }, 5000);
   });
 });
 
-server.listen(3000, handleListen);
+httpServer.listen(3000, handleListen);
+
+// const wss = new WebSocket.Server({ server });
+// const sockets = [];
+
+// wss.on("connection", (backSocket) => {
+//   sockets.push(backSocket); //firefox, IE, Chrome
+//   backSocket["nickname"] = "Anon"; //기본은 Anon
+//   console.log("connected to browser");
+//   backSocket.on("close", () => console.log("disconnected from broswser"));
+//   backSocket.on("message", (msg) => {
+//     const message = JSON.parse(msg);
+//     switch (message.type) {
+//       case "new_message":
+//         sockets.forEach((aSocket) =>
+//           aSocket.send(`${backSocket.nickname}: ${message.payload}`)
+//         );
+//         break;
+//       case "nickname":
+//         backSocket["nickname"] = message.payload;
+//         break;
+//     }
+//   });
+// });

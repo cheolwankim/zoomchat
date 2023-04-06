@@ -1,43 +1,23 @@
-const messageList = document.querySelector("ul");
-const messageForm = document.querySelector("#message");
-const nickForm = document.querySelector("#nick");
+const frontSocket = io();
 
-function makeMessage(type, payload) {
-  const msg = { type, payload };
-  return JSON.stringify(msg);
-}
+const welcome = document.getElementById("welcome");
+const form = welcome.querySelector("form");
 
-const frontSocket = new WebSocket(`ws://${window.location.host}`);
-
-frontSocket.addEventListener("open", () => {
-  //open 되면
-  console.log("Connected to Server");
-});
-
-frontSocket.addEventListener("message", (message) => {
-  const li = document.createElement("li");
-  li.innerText = message.data;
-  messageList.append(li);
-});
-
-frontSocket.addEventListener("close", () => {
-  //서버오프라인되면 실행
-  console.log("disconnected to Server");
-});
-
-function handleSubmit(event) {
+function handleRoomSubmit(event) {
   event.preventDefault();
-  const input = messageForm.querySelector("input");
-  frontSocket.send(makeMessage("new_message",input.value));
+  const input = form.querySelector("input");
+
+  function backendDone(msg) {
+    console.log(`The backend says: `, msg);
+  }
+
+  frontSocket.emit(
+    "enter_room",
+    input.value,
+    { payload: input.value },
+    backendDone
+  );  
   input.value = "";
 }
 
-function handleNickSubmit(event) {
-  event.preventDefault();
-  const input = nickForm.querySelector("input");
-  frontSocket.send(makeMessage('nickname',input.value));
-  input.value='';
-}
-
-messageForm.addEventListener("submit", handleSubmit);
-nickForm.addEventListener("submit", handleNickSubmit);
+form.addEventListener("submit", handleRoomSubmit);
