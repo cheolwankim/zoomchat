@@ -1,0 +1,30 @@
+body {
+  background-color: rgba(0, 0, 0, 0.705);
+}
+header {
+  color: aliceblue;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+}
+#myStream {
+  margin-top: 50px;
+  background-color: aquamarine;
+
+  padding: 13px 90px;
+
+  border-radius: 30px;
+}
+
+#chatting {
+  margin-top: 50px;
+  background-color: yellow;
+  padding: 13px 15px;
+
+  border-radius: 30px;
+  font-size: 25px;
+  font-weight: bold;
+}
