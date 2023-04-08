@@ -193,6 +193,7 @@ function handleChatSubmit(event) {
   const div = document.createElement("div");
   div.innerText = 'You: ' + input.value;
   chatWord.appendChild(div);
-  myDataChannel.send(input.value);
   input.value='';  
+  myDataChannel.send(input.value);
+  
 }
