@@ -182,6 +182,7 @@ function handleAddStream(data) {
 function handleRecievedData(msg) {
   const div = document.createElement("div");
   div.innerText = 'Someone: ' + msg;
+  console.log(msg);
   chatWord.appendChild(div);    
 }
 
@@ -193,7 +194,7 @@ function handleChatSubmit(event) {
   const div = document.createElement("div");
   div.innerText = 'You: ' + input.value;
   chatWord.appendChild(div);
-  input.value='';  
-  myDataChannel.send(input.value);
   
+  myDataChannel.send(input.value);
+  input.value='';  //깃허브 순서 확인 해야됨
 }
