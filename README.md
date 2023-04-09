@@ -1,6 +1,6 @@
 #CheloWan's Chat Room
 
-Create Zoom site using nodejs webrtc and websockets<br>For details please visit my blog and find Zoom 코딩
+Create Zoom site using nodejs webrtc and websockets<br>For details please visit https://cheolwan.tistory.com/category/Zoom%20%EC%BD%94%EB%94%A9
 
 
 
