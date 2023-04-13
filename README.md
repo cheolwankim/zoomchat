@@ -10,8 +10,6 @@
 
 <img src="https://img.shields.io/badge/Javascript-F7DF1E?style=for-the-badge&logo=react&logoColor=white">  <img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white">  <img src="https://img.shields.io/badge/socketdotio-010101?style=for-the-badge&logo=socketdotio&logoColor=white">  <img src="https://img.shields.io/badge/webrtc-333333?style=for-the-badge&logo=webrtc&logoColor=white">  <img src="https://img.shields.io/badge/babel-F9DC3E?style=for-the-badge&logo=babel&logoColor=white">
 
-babel #F9DC3E
-
 
 
 
