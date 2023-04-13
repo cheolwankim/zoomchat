@@ -8,8 +8,9 @@
 
 ## 🛠 Using Skill
 
-<img src="https://img.shields.io/badge/Javascript-F7DF1E?style=for-the-badge&logo=react&logoColor=white">  <img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white">  <img src="https://img.shields.io/badge/socketdotio-010101?style=for-the-badge&logo=socketdotio&logoColor=white">   <img src="https://img.shields.io/badge/webrtc-333333?style=for-the-badge&logo=webrtc&logoColor=white">
+<img src="https://img.shields.io/badge/Javascript-F7DF1E?style=for-the-badge&logo=react&logoColor=white">  <img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white">  <img src="https://img.shields.io/badge/socketdotio-010101?style=for-the-badge&logo=socketdotio&logoColor=white">  <img src="https://img.shields.io/badge/webrtc-333333?style=for-the-badge&logo=webrtc&logoColor=white">  <img src="https://img.shields.io/badge/babel-F9DC3E?style=for-the-badge&logo=babel&logoColor=white">
 
+babel #F9DC3E
 
 
 
@@ -36,24 +37,15 @@ For more information please visit [My Blog](https://cheolwan.tistory.com/categor
 
 ## ⭐️ How To Use
 
-start:
+please visit [My Blog](https://cheolwan.tistory.com/category/Zoom%20%EC%BD%94%EB%94%A9) for All information<br>
+Or Click for find information more easily<br>
+[Server Setting_1](https://cheolwan.tistory.com/58)<br>
+[Server Setting_2](https://cheolwan.tistory.com/59)<br>
+[Local hosting](https://cheolwan.tistory.com/85)
+<br>
 
-```sh
-npm install
-npm start
-```
 
-build:
 
-```sh
-npm run build
-```
-
-deploy:
-
-```sh
-npm run deploy
-```
 
 ## 📁 Reference
 [ReactJS로 영화 웹 서비스 만들기](https://nomadcoders.co/react-for-beginners)
