@@ -30,13 +30,13 @@ Chat for Free!!
 <br><br>
 ![image](https://user-images.githubusercontent.com/105213482/231858024-af6a0313-aeee-46cd-b547-d80585ffd6a6.png)
 <br><br>
-For more information please visit [My Blog](https://cheolwan.tistory.com/category/Zoom%20%EC%BD%94%EB%94%A9)
-<br>
+
 
 ## ⭐️ How To Use
 
-please visit [My Blog](https://cheolwan.tistory.com/category/Zoom%20%EC%BD%94%EB%94%A9) for All information<br>
-Or Click for find information more easily<br>
+Please visit [My Blog](https://cheolwan.tistory.com/category/Zoom%20%EC%BD%94%EB%94%A9) for All information<br>
+Or Click for find information more easily<br><br>
+
 [Server Setting_1](https://cheolwan.tistory.com/58)<br>
 [Server Setting_2](https://cheolwan.tistory.com/59)<br>
 [Local hosting](https://cheolwan.tistory.com/85)
